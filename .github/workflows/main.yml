@@ -1,1 +1,11 @@
-
+name: PR
+on:
+  pull_request:
+    types:
+      - opened
+jobs:
+  PRtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
